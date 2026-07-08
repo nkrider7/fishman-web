@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+
+    <title>Changelog | Fishman</title>
+    <meta
+      name="description"
+      content="Fishman changelog (placeholder). Track updates as the project evolves."
+    />
+    <link rel="icon" href="assets/icon.png" sizes="any" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/styles.css" />
+
+    <script>
+      (function () {
+        var saved = null;
+        try {
+          saved = localStorage.getItem("fishman-theme");
+        } catch (e) {}
+        // Default to dark for the intended product vibe.
+        var theme = saved || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <div id="bg" aria-hidden="true">
+      <div class="grid-pattern"></div>
+      <div class="blob blob-a"></div>
+      <div class="blob blob-b"></div>
+      <div class="blob blob-c"></div>
+    </div>
+
+    <header class="nav-wrap" role="banner">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Fishman home">
+          <img class="brand-logo" src="assets/icon.png" width="36" height="36" alt="Fishman logo" loading="eager" />
+          <span class="brand-text">Fishman</span>
+        </a>
+
+        <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+          <a class="nav-link" href="index.html#why" data-nav-close>Why</a>
+          <a class="nav-link" href="index.html#features-grid" data-nav-close>Features</a>
+          <a class="nav-link" href="index.html#docs-preview" data-nav-close>Docs</a>
+          <a class="nav-link" href="docs.html#getting-started" data-nav-close>Getting Started</a>
+          <a class="nav-link" href="index.html#roadmap" data-nav-close>Roadmap</a>
+          <a class="nav-link" href="index.html#download" data-nav-close>Download</a>
+          <a class="nav-link nav-github" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme">
+            <span class="icon-btn-inner" aria-hidden="true">☾</span>
+          </button>
+          <button class="hamburger" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-links" aria-expanded="false">
+            <span class="hamburger-lines" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" tabindex="-1">
+      <section class="section" style="padding-top: 56px;">
+        <div class="container">
+          <header class="section-head">
+            <div>
+              <h1 class="section-title reveal" data-reveal>Changelog</h1>
+              <p class="section-subtitle reveal" data-reveal>
+                Placeholder. Populate this page with release notes as Fishman progresses.
+              </p>
+            </div>
+          </header>
+
+          <div class="vision-grid" style="margin-top: 10px;">
+            <div class="vision-card reveal" data-reveal>
+              <h3>Upcoming</h3>
+              <ul class="timeline-list" style="gap: 8px;">
+                <li>Better backend scanner coverage</li>
+                <li>Improved import/export workflows</li>
+                <li>More documentation sections</li>
+              </ul>
+            </div>
+            <div class="vision-card reveal" data-reveal>
+              <h3>Where to track changes</h3>
+              <p class="section-subtitle" style="margin: 0;">
+                Use GitHub releases and issues for the most up-to-date discussions:
+              </p>
+              <div class="hero-cta" style="margin-top: 14px;">
+                <a class="btn btn-primary" href="https://github.com/nkrider7/fishman/releases" target="_blank" rel="noopener noreferrer">
+                  GitHub Releases
+                </a>
+                <a class="btn btn-ghost" href="https://github.com/nkrider7/fishman/issues" target="_blank" rel="noopener noreferrer">
+                  Issues
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img class="footer-logo" src="assets/icon.png" width="28" height="28" alt="Fishman logo" loading="lazy" />
+          <div>
+            <div class="footer-name">Fishman</div>
+            <div class="footer-tag">Open a request. Hit send. Stay in flow.</div>
+          </div>
+        </div>
+
+        <div class="footer-cols">
+          <div class="footer-col">
+            <div class="footer-title">Links</div>
+            <a class="footer-link" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="footer-link" href="docs.html">Documentation</a>
+            <a class="footer-link" href="https://github.com/nkrider7/fishman/issues" target="_blank" rel="noopener noreferrer">Issues</a>
+            <a class="footer-link" href="index.html#roadmap">Roadmap</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div class="muted">
+          © <span id="year"></span> Fishman. Built for developers who care about speed, privacy, and flow.
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/js/navbar.js"></script>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
+
