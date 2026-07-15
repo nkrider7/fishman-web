@@ -1,8 +1,43 @@
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
 @import "../public/assets/css/style.css";
 @import "../public/assets/css/components.css";
 @import "../public/assets/css/animations.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-fish-bg: var(--bg);
+  --color-fish-surface: var(--surface);
+  --color-fish-card: var(--card);
+  --color-fish-border: var(--border);
+  --color-fish-primary: var(--primary);
+  --color-fish-secondary: var(--secondary);
+  --color-fish-muted: var(--muted);
+  --color-fish-soft: var(--muted-soft);
+  --color-fish-ink: var(--text);
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --shadow-glow: 0 0 0 1px rgba(254, 159, 2, 0.18), 0 16px 40px rgba(254, 159, 2, 0.12);
+}
 
+@layer utilities {
+  .animate-scanner-glow {
+    animation: scannerGlow 2.8s ease-in-out infinite;
+  }
+
+  .animate-flow-arrow {
+    animation: flowArrow 1.8s ease-in-out infinite;
+  }
+
+  .animate-preview-float {
+    animation: previewFloat 5.5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scanner-glow,
+  .animate-flow-arrow,
+  .animate-preview-float {
+    animation: none !important;
+  }
+}

@@ -5,30 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="dark light" />
 
-    <title>Fishman | Open-source API IDE</title>
+    <title>Fishman — Open-source API IDE & Native REST Client | Postman Alternative</title>
     <meta
       name="description"
-      content="Fishman is a modern, native desktop API client for developers who care about speed, privacy, and flow. Built with Tauri + React, it scans backend code to generate API collections."
+      content="Fishman is a local-first, open-source API IDE (Tauri + React). Test REST APIs, scan backend routes into collections, and stay private — a fast native alternative to Postman, Insomnia, and Bruno."
     />
-    <meta name="keywords" content="Fishman, API IDE, REST client, Tauri, React, backend scanner" />
+    <meta
+      name="keywords"
+      content="Fishman, Postman alternative, API IDE, REST client, Insomnia alternative, Bruno, OpenAPI, Swagger, GraphQL, gRPC, WebSocket, local-first API testing"
+    />
+    <meta name="author" content="Fishman" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <link rel="canonical" href="https://nkrider7.github.io/fishman/" />
 
-    <meta property="og:title" content="Fishman | Open-source API IDE" />
+    <meta property="og:title" content="Fishman — Open-source API IDE & Native REST Client" />
     <meta
       property="og:description"
-      content="Open a request. Hit send. Stay in flow. Fishman scans backend routes and builds collections automatically."
+      content="Local-first API testing with backend scanner, collections, and privacy-first workflow. Built with Tauri + React."
     />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://nkrider7.github.io/fishman/" />
+    <meta property="og:image" content="https://nkrider7.github.io/fishman/assets/mainmock.png" />
+    <meta property="og:image:alt" content="Fishman API IDE showing collections, a request builder, and a JSON response" />
+    <meta property="og:site_name" content="Fishman" />
+    <meta property="og:locale" content="en_US" />
 
-    <link rel="icon" href="assets/icon.png" sizes="any" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fishman — Open-source API IDE & Native REST Client" />
+    <meta
+      name="twitter:description"
+      content="Local-first open-source API client with backend scanning. A privacy-first Postman / Insomnia alternative."
+    />
+    <meta name="twitter:image" content="https://nkrider7.github.io/fishman/assets/mainmock.png" />
+
+    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./src/styles.css" />
 
     <script>
       // Reduce layout shift: set initial theme before paint.
@@ -57,17 +78,31 @@
     <header class="nav-wrap" role="banner">
       <div class="container nav">
         <a class="brand" href="#top" aria-label="Fishman home">
-          <img class="brand-logo" src="assets/icon.png" width="36" height="36" alt="Fishman logo" loading="eager" />
-          <span class="brand-text">Fishman</span>
+          <img
+            class="brand-logo brand-logo--dark"
+            src="assets/txtlogo.png"
+            width="137"
+            height="36"
+            alt=""
+            loading="eager"
+          />
+          <img
+            class="brand-logo brand-logo--light"
+            src="assets/txtlogodark.png"
+            width="137"
+            height="36"
+            alt=""
+            loading="eager"
+          />
         </a>
 
         <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
           <a class="nav-link" href="#why" data-nav-close>Why</a>
           <a class="nav-link" href="#features-grid" data-nav-close>Features</a>
-          <a class="nav-link" href="#docs-preview" data-nav-close>Docs</a>
-          <a class="nav-link" href="docs.html" data-nav-close>API Guide</a>
+          <a class="nav-link" href="#compare" data-nav-close>Compare</a>
+          <a class="nav-link" href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer" data-nav-close>Docs</a>
           <a class="nav-link" href="changelog.html" data-nav-close>Changelog</a>
-          <a class="nav-link" href="#roadmap" data-nav-close>Roadmap</a>
+          <a class="nav-link" href="#faq" data-nav-close>FAQ</a>
           <a class="nav-link" href="#download" data-nav-close>Download</a>
           <a class="nav-link nav-github" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">
             GitHub
@@ -94,19 +129,20 @@
             </p>
 
             <h1 class="hero-title reveal" data-reveal>
-              Open-source & Native Git IDE for Exploring and Testing APIs.
+              Open-source native API IDE for exploring and testing REST APIs.
             </h1>
 
             <p class="hero-subtitle reveal" data-reveal>
-              Fishman is a lightweight REST client built with Tauri v2 and React. It feels like a focused IDE for APIs — resizable panels,
-              multi-tab requests, environments, collections, and a project scanner that turns your backend code into ready-to-hit endpoints.
+              Fishman is a local-first REST client built with Tauri v2 and React. It feels like a focused IDE for APIs —
+              resizable panels, multi-tab requests, environments, collections, and a backend scanner that turns your
+              source code into ready-to-hit endpoints.
             </p>
 
             <div class="hero-cta reveal" data-reveal>
               <a class="btn btn-primary" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">
                 View on GitHub
               </a>
-              <a class="btn btn-ghost" href="docs.html">Documentation</a>
+              <a class="btn btn-ghost" href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer">Documentation</a>
             </div>
 
             <div class="hero-meta reveal" data-reveal>
@@ -126,16 +162,16 @@
           </div>
 
           <div class="hero-right reveal" data-reveal>
-            <div class="hero-mockups" aria-label="Fishman product mockups">
+            <div class="hero-mockups" aria-label="Fishman product mockup">
               <img
                 class="mockup-main"
-                src="assets/icon.png"
-                width="960"
-                height="720"
-                alt="Fishman UI preview"
+                src="assets/mainmock.png"
+                width="1920"
+                height="1940"
+                alt="Fishman open-source API IDE showing collections, a POST login request, and a JSON response"
                 loading="eager"
+                decoding="async"
               />
-            
             </div>
           </div>
         </div>
@@ -186,74 +222,7 @@
         </div>
       </section>
 
-      <section class="section" id="backend-scanner" aria-labelledby="scanner-title">
-        <div class="container">
-          <header class="section-head">
-            <div>
-              <h2 class="section-title reveal" data-reveal id="scanner-title">Backend Scanner</h2>
-              <p class="section-subtitle reveal" data-reveal>
-                Point Fishman at your backend and it generates API collections automatically — routes, params, and request bodies included.
-              </p>
-            </div>
-          </header>
-
-          <div class="scanner-grid">
-            <div class="flow reveal" data-reveal aria-label="Scanner workflow">
-              <div class="flow-step">
-                <div class="flow-node">Backend Source Code</div>
-              </div>
-              <div class="flow-arrow" aria-hidden="true">↓</div>
-              <div class="flow-step">
-                <div class="flow-node">Fishman Scanner</div>
-              </div>
-              <div class="flow-arrow" aria-hidden="true">↓</div>
-              <div class="flow-step">
-                <div class="flow-node">Routes</div>
-              </div>
-              <div class="flow-arrow" aria-hidden="true">↓</div>
-              <div class="flow-step">
-                <div class="flow-node">Request Bodies</div>
-              </div>
-              <div class="flow-arrow" aria-hidden="true">↓</div>
-              <div class="flow-step">
-                <div class="flow-node">Collections</div>
-              </div>
-              <div class="flow-arrow" aria-hidden="true">↓</div>
-              <div class="flow-step">
-                <div class="flow-node flow-node-final">Ready to Test</div>
-              </div>
-            </div>
-
-            <div class="coming-soon reveal" data-reveal>
-              <h3>Supported today</h3>
-              <div class="pill-wrap" role="list" aria-label="Supported frameworks">
-                <span class="pill" role="listitem">Express</span>
-                <span class="pill" role="listitem">Fastify</span>
-                <span class="pill" role="listitem">Koa</span>
-                <span class="pill" role="listitem">Hono</span>
-                <span class="pill" role="listitem">Elysia</span>
-                <span class="pill" role="listitem">NestJS</span>
-                <span class="pill" role="listitem">Next.js</span>
-                <span class="pill" role="listitem">Bun / Nitro</span>
-              </div>
-
-              <div class="divider"></div>
-
-              <h3>Coming soon</h3>
-              <div class="pill-wrap" role="list" aria-label="Coming soon languages">
-                <span class="pill" role="listitem">Python</span>
-                <span class="pill" role="listitem">Django</span>
-                <span class="pill" role="listitem">Flask</span>
-                <span class="pill" role="listitem">Go</span>
-                <span class="pill" role="listitem">Rust</span>
-                <span class="pill" role="listitem">Java Spring Boot</span>
-                <span class="pill" role="listitem">Laravel</span>
-                <span class="pill" role="listitem">ASP.NET</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div id="backend-scanner-root"></div>
 
       <section class="section" id="features-grid" aria-labelledby="features-title">
         <div class="container">
@@ -324,6 +293,156 @@
               <div class="feature-emoji" aria-hidden="true">⚙️</div>
               <h3>Cross platform</h3>
               <p>Build once, run where you need — native desktop distribution via Tauri.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="compare" aria-labelledby="compare-title">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-reveal id="compare-title">Fishman vs popular API clients</h2>
+            <p class="section-subtitle reveal" data-reveal>
+              Looking for an open-source Postman alternative? Here’s an honest look at how Fishman compares with
+              Insomnia, Bruno, Hoppscotch, Thunder Client, and Apidog — focused on privacy, locality, and developer flow.
+            </p>
+          </header>
+
+          <div class="compare-wrap reveal" data-reveal>
+            <table class="compare-table">
+              <caption class="sr-only">
+                Feature comparison of Fishman with Postman, Insomnia, Bruno, Hoppscotch, Thunder Client, and Apidog
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Capability</th>
+                  <th scope="col">Fishman</th>
+                  <th scope="col">Postman</th>
+                  <th scope="col">Insomnia</th>
+                  <th scope="col">Bruno</th>
+                  <th scope="col">Hoppscotch</th>
+                  <th scope="col">Thunder Client</th>
+                  <th scope="col">Apidog</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Open source</th>
+                  <td>Yes</td>
+                  <td>No</td>
+                  <td>Partial</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <th scope="row">Local-first / privacy</th>
+                  <td>Strong (SQLite, no cloud required)</td>
+                  <td>Cloud-centric by default</td>
+                  <td>Local + sync options</td>
+                  <td>Git-friendly local files</td>
+                  <td>Web + self-host</td>
+                  <td>VS Code local</td>
+                  <td>Cloud + desktop</td>
+                </tr>
+                <tr>
+                  <th scope="row">Native desktop</th>
+                  <td>Yes (Tauri)</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Web-first</td>
+                  <td>Editor extension</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <th scope="row">Backend code → collections</th>
+                  <td>Yes (scanner)</td>
+                  <td>Manual / import</td>
+                  <td>Manual / import</td>
+                  <td>Manual / import</td>
+                  <td>Manual / import</td>
+                  <td>Manual</td>
+                  <td>Design/import focused</td>
+                </tr>
+                <tr>
+                  <th scope="row">Postman import/export</th>
+                  <td>Yes</td>
+                  <td>Native</td>
+                  <td>Yes</td>
+                  <td>Import paths vary</td>
+                  <td>Yes</td>
+                  <td>Limited</td>
+                  <td>Yes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="section-subtitle compare-note reveal" data-reveal>
+            Fishman aims to be a lightweight native alternative to Postman and Insomnia with Bruno-like local-first
+            values — plus a backend scanner that turns real routes into testable collections.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="protocols" aria-labelledby="protocols-title">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-reveal id="protocols-title">Protocols &amp; workflows</h2>
+            <p class="section-subtitle reveal" data-reveal>
+              Built for REST API testing today, with room to grow into GraphQL, gRPC, WebSocket, OpenAPI / Swagger, and
+              design-first API workflows.
+            </p>
+          </header>
+
+          <div class="cards grid-3">
+            <article class="card reveal" data-reveal>
+              <h3>REST</h3>
+              <p>
+                Core support for request building, environments, auth, collections, and fast response inspection —
+                the daily REST workflow.
+              </p>
+              <p class="protocol-status protocol-status--now">Available now</p>
+            </article>
+            <article class="card reveal" data-reveal>
+              <h3>OpenAPI / Swagger</h3>
+              <p>
+                Import and design-first APIs fit Fishman’s scanner and collection model. Use specs alongside (or instead of)
+                hand-built requests as docs and tooling mature.
+              </p>
+              <p class="protocol-status protocol-status--soon">Import / design-first — expanding</p>
+            </article>
+            <article class="card reveal" data-reveal>
+              <h3>GraphQL</h3>
+              <p>
+                GraphQL querying and schema-aware workflows are on the product vision path for teams that outgrow REST-only
+                clients.
+              </p>
+              <p class="protocol-status protocol-status--soon">On the roadmap</p>
+            </article>
+            <article class="card reveal" data-reveal>
+              <h3>gRPC</h3>
+              <p>
+                gRPC support is planned for service-to-service testing without leaving the same IDE-style workspace.
+              </p>
+              <p class="protocol-status protocol-status--soon">On the roadmap</p>
+            </article>
+            <article class="card reveal" data-reveal>
+              <h3>WebSocket</h3>
+              <p>
+                Real-time WebSocket sessions belong next to your REST collections — tracked as future protocol coverage.
+              </p>
+              <p class="protocol-status protocol-status--soon">On the roadmap</p>
+            </article>
+            <article class="card reveal" data-reveal>
+              <h3>Design-first APIs</h3>
+              <p>
+                Start from contracts (OpenAPI / Swagger) or from code via the backend scanner — then iterate collections
+                locally without a mandatory cloud.
+              </p>
+              <p class="protocol-status protocol-status--now">Code-first scanner live</p>
             </article>
           </div>
         </div>
@@ -456,30 +575,116 @@
           </header>
 
           <div class="cards grid-3">
-            <a class="card card-link reveal" data-reveal href="docs.html#getting-started" aria-label="Read Getting Started">
+            <a class="card card-link reveal" data-reveal href="https://nkrider7.github.io/fishman-docs/getting-started" target="_blank" rel="noopener noreferrer" aria-label="Read Getting Started">
               <h3>Getting Started</h3>
               <p>Install, run, and ship your first API workflow locally.</p>
             </a>
-            <a class="card card-link reveal" data-reveal href="docs.html#backend-scanner" aria-label="Read Backend Scanner">
+            <a class="card card-link reveal" data-reveal href="https://nkrider7.github.io/fishman-docs/backend-scanner" target="_blank" rel="noopener noreferrer" aria-label="Read Backend Scanner">
               <h3>Backend Scanner</h3>
               <p>Scan backend code into routes, request bodies, and collections.</p>
             </a>
-            <a class="card card-link reveal" data-reveal href="docs.html#collections" aria-label="Read Collections">
+            <a class="card card-link reveal" data-reveal href="https://nkrider7.github.io/fishman-docs/collections" target="_blank" rel="noopener noreferrer" aria-label="Read Collections">
               <h3>Collections</h3>
               <p>Organize requests with nested folders and fast replayable history.</p>
             </a>
-            <a class="card card-link reveal" data-reveal href="docs.html#cli" aria-label="Read CLI">
+            <a class="card card-link reveal" data-reveal href="https://nkrider7.github.io/fishman-docs/cli" target="_blank" rel="noopener noreferrer" aria-label="Read CLI">
               <h3>CLI</h3>
               <p>Coming soon — until then, use the app workflow.</p>
             </a>
-            <a class="card card-link reveal" data-reveal href="docs.html#api-reference" aria-label="Read API Reference">
+            <a class="card card-link reveal" data-reveal href="https://nkrider7.github.io/fishman-docs/api-reference" target="_blank" rel="noopener noreferrer" aria-label="Read API Reference">
               <h3>API Reference</h3>
               <p>Endpoints and request/response details.</p>
             </a>
-            <a class="card card-link reveal" data-reveal href="docs.html#installation" aria-label="Read Installation">
+            <a class="card card-link reveal" data-reveal href="https://nkrider7.github.io/fishman-docs/installation" target="_blank" rel="noopener noreferrer" aria-label="Read Installation">
               <h3>Installation</h3>
               <p>Prerequisites and production build commands.</p>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq" aria-labelledby="faq-title">
+        <div class="container">
+          <header class="section-head">
+            <h2 class="section-title reveal" data-reveal id="faq-title">FAQ</h2>
+            <p class="section-subtitle reveal" data-reveal>
+              Quick answers about Fishman as a Postman alternative, local-first privacy, and protocol support.
+            </p>
+          </header>
+
+          <div class="faq-list reveal" data-reveal>
+            <details class="faq-item">
+              <summary>Is Fishman a Postman alternative?</summary>
+              <p>
+                Yes. Fishman is an open-source, local-first API IDE for REST testing — a privacy-first Postman alternative
+                with native desktop feel and backend scanning into collections.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>How is Fishman different from Insomnia, Bruno, or Hoppscotch?</summary>
+              <p>
+                Like Bruno, Fishman prefers local data over cloud lock-in. Like Insomnia and Hoppscotch, it’s built for
+                everyday API requests. Fishman’s differentiator is scanning backend source to generate collections — not
+                only manual request authoring.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I import Postman collections?</summary>
+              <p>
+                Yes. Fishman supports Postman import plus export to Fishman or Postman formats so you can move workflows
+                without rewriting everything.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Does Fishman support OpenAPI / Swagger?</summary>
+              <p>
+                OpenAPI / Swagger and design-first APIs are part of Fishman’s direction. Today you can build collections
+                from code via the backend scanner; broader spec import workflows continue to expand.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>What about GraphQL, gRPC, and WebSocket?</summary>
+              <p>
+                REST is the primary workflow today. GraphQL, gRPC, and WebSocket support are planned so you can keep more
+                API surfaces in one native client over time.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Is my data local? Does Fishman work offline?</summary>
+              <p>
+                Collections, environments, history, and settings live locally via SQLite. You can work offline — no cloud
+                account is required to stay productive.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>How does the Backend Scanner work?</summary>
+              <p>
+                Point Fishman at your backend project. AST-based scanning discovers routes and generates request bodies
+                and collections so you can hit endpoints without hand-copying paths from code.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>How does Fishman compare to Thunder Client or Apidog?</summary>
+              <p>
+                Thunder Client lives inside VS Code; Apidog leans into design/docs platforms. Fishman is a standalone
+                native desktop API IDE focused on speed, privacy, and scanning code into testable collections.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Is Fishman related to Integrate.io?</summary>
+              <p>
+                No. Integrate.io is a data integration platform. Fishman is an API client / API IDE for exploring and
+                testing HTTP APIs — closer to Postman, Insomnia, Bruno, and Hoppscotch.
+              </p>
+            </details>
+            <details class="faq-item">
+              <summary>Where can I read the docs?</summary>
+              <p>
+                Full documentation lives at
+                <a href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer">nkrider7.github.io/fishman-docs</a>,
+                covering installation, getting started, backend scanning, and collections.
+              </p>
+            </details>
           </div>
         </div>
       </section>
@@ -495,7 +700,7 @@
               <a class="btn btn-primary" href="https://github.com/nkrider7/fishman/releases" target="_blank" rel="noopener noreferrer">
                 Get Releases
               </a>
-              <a class="btn btn-ghost" href="docs.html#getting-started">
+              <a class="btn btn-ghost" href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer">
                 Run locally
               </a>
             </div>
@@ -512,14 +717,14 @@
                 <span class="block">Build faster with Fishman.</span>
               </h2>
 
-              <p class="eyebrow reveal" data-reveal>Subtitle</p>
+              <p class="eyebrow reveal" data-reveal>Local-first API testing</p>
               <p class="section-subtitle reveal" data-reveal>
-                Open-source native Git IDE that automatically discovers APIs, scans your backend, and generates ready-to-test
-                collections in seconds.
+                Open-source native API IDE that discovers routes, scans your backend, and generates ready-to-test
+                collections in seconds — without forcing a cloud workspace.
               </p>
 
               <div class="understand-cta reveal" data-reveal>
-                <a class="btn btn-primary" href="docs.html#getting-started">Get Started</a>
+                <a class="btn btn-primary" href="https://nkrider7.github.io/fishman-docs/getting-started" target="_blank" rel="noopener noreferrer">Get Started</a>
               </div>
             </div>
 
@@ -550,7 +755,7 @@
               <img
                 class="understand-image"
                 src="assets/btmmock.png"
-                alt="Fishman interface preview"
+                alt="Fishman native REST client interface preview with request builder and response panel"
                 loading="lazy"
               />
             </div>
@@ -572,7 +777,7 @@
             <div class="footer-col">
               <div class="footer-title">Links</div>
               <a class="footer-link" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="footer-link" href="docs.html">Documentation</a>
+              <a class="footer-link" href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer">Documentation</a>
               <a class="footer-link" href="https://github.com/nkrider7/fishman/issues" target="_blank" rel="noopener noreferrer">Issues</a>
               <a class="footer-link" href="#roadmap">Roadmap</a>
             </div>
@@ -602,8 +807,141 @@
       </footer>
     </main>
 
-    <script type="module" src="./src/js/navbar.js"></script>
-    <script type="module" src="./src/js/main.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://nkrider7.github.io/fishman/#website",
+            "url": "https://nkrider7.github.io/fishman/",
+            "name": "Fishman",
+            "description": "Local-first open-source API IDE and native REST client with backend scanning.",
+            "publisher": { "@id": "https://nkrider7.github.io/fishman/#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://nkrider7.github.io/fishman/#organization",
+            "name": "Fishman",
+            "url": "https://nkrider7.github.io/fishman/",
+            "logo": "https://nkrider7.github.io/fishman/assets/icon.png",
+            "sameAs": ["https://github.com/nkrider7/fishman"]
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://nkrider7.github.io/fishman/#app",
+            "name": "Fishman",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Windows, macOS, Linux",
+            "url": "https://nkrider7.github.io/fishman/",
+            "downloadUrl": "https://github.com/nkrider7/fishman/releases",
+            "image": "https://nkrider7.github.io/fishman/assets/mainmock.png",
+            "description": "Fishman is a local-first, open-source API IDE built with Tauri and React. Test REST APIs, scan backend routes into collections, and stay private — a native alternative to Postman, Insomnia, and Bruno.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "featureList": [
+              "Local-first API testing with SQLite",
+              "Backend scanner that generates API collections",
+              "Postman import and export",
+              "Environments, auth, and nested collections",
+              "Native desktop app via Tauri"
+            ],
+            "sameAs": ["https://github.com/nkrider7/fishman"]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://nkrider7.github.io/fishman/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is Fishman a Postman alternative?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Fishman is an open-source, local-first API IDE for REST testing — a privacy-first Postman alternative with native desktop feel and backend scanning into collections."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is Fishman different from Insomnia, Bruno, or Hoppscotch?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Like Bruno, Fishman prefers local data over cloud lock-in. Like Insomnia and Hoppscotch, it’s built for everyday API requests. Fishman’s differentiator is scanning backend source to generate collections — not only manual request authoring."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I import Postman collections?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Fishman supports Postman import plus export to Fishman or Postman formats so you can move workflows without rewriting everything."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Fishman support OpenAPI / Swagger?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "OpenAPI / Swagger and design-first APIs are part of Fishman’s direction. Today you can build collections from code via the backend scanner; broader spec import workflows continue to expand."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What about GraphQL, gRPC, and WebSocket?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "REST is the primary workflow today. GraphQL, gRPC, and WebSocket support are planned so you can keep more API surfaces in one native client over time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my data local? Does Fishman work offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Collections, environments, history, and settings live locally via SQLite. You can work offline — no cloud account is required to stay productive."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does the Backend Scanner work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Point Fishman at your backend project. AST-based scanning discovers routes and generates request bodies and collections so you can hit endpoints without hand-copying paths from code."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Fishman compare to Thunder Client or Apidog?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Thunder Client lives inside VS Code; Apidog leans into design/docs platforms. Fishman is a standalone native desktop API IDE focused on speed, privacy, and scanning code into testable collections."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Fishman related to Integrate.io?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Integrate.io is a data integration platform. Fishman is an API client / API IDE for exploring and testing HTTP APIs — closer to Postman, Insomnia, Bruno, and Hoppscotch."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where can I read the docs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Full documentation lives at https://nkrider7.github.io/fishman-docs, covering installation, getting started, backend scanning, and collections."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
 
