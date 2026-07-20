@@ -139,10 +139,12 @@
             </p>
 
             <div class="hero-cta reveal" data-reveal>
-              <a class="btn btn-primary" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">
+              <a class="btn btn-primary" href="#download">
+                Download Linux Beta
+              </a>
+              <a class="btn btn-ghost" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">
                 View on GitHub
               </a>
-              <a class="btn btn-ghost" href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer">Documentation</a>
             </div>
 
             <div class="hero-meta reveal" data-reveal>
@@ -176,6 +178,67 @@
           </div>
         </div>
       </div>
+
+      <section class="section section-download" id="download" aria-labelledby="download-title">
+        <div class="container">
+          <div class="download-card reveal" data-reveal>
+            <div class="download-card-copy">
+              <p class="eyebrow">Linux beta · v0.1.0</p>
+              <h2 class="section-title" id="download-title">Download Fishman</h2>
+              <p class="section-subtitle">
+                Linux builds are ready now (amd64). Pick AppImage for a one-file run, or install with
+                <code class="inline-code">.deb</code>
+                /
+                <code class="inline-code">.rpm</code>.
+                macOS and Windows are coming soon.
+              </p>
+            </div>
+
+            <div class="download-packages" role="group" aria-label="Linux download packages">
+              <a
+                class="download-package download-package--primary"
+                href="linux/Fishman_0.1.0_amd64.AppImage"
+                download
+              >
+                <span class="download-package-label">AppImage</span>
+                <span class="download-package-meta">Universal · run anywhere</span>
+              </a>
+              <a
+                class="download-package"
+                href="linux/Fishman_0.1.0_amd64.deb"
+                download
+              >
+                <span class="download-package-label">.deb</span>
+                <span class="download-package-meta">Debian / Ubuntu</span>
+              </a>
+              <a
+                class="download-package"
+                href="linux/Fishman-0.1.0-1.x86_64.rpm"
+                download
+              >
+                <span class="download-package-label">.rpm</span>
+                <span class="download-package-meta">Fedora / RHEL</span>
+              </a>
+            </div>
+
+            <div class="download-card-foot">
+              <p class="download-hint muted">
+                AppImage tip:
+                <code class="inline-code">chmod +x Fishman_0.1.0_amd64.AppImage</code>
+                then run it.
+              </p>
+              <a
+                class="download-docs-link"
+                href="https://nkrider7.github.io/fishman-docs"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read the docs →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section" id="why" aria-labelledby="why-title">
         <div class="container">
@@ -689,25 +752,6 @@
         </div>
       </section>
 
-      <section class="section cta" id="download" aria-labelledby="download-title">
-        <div class="container">
-          <div class="cta-inner reveal" data-reveal>
-            <div>
-              <h2 class="section-title" id="download-title">Download Fishman</h2>
-              <p class="section-subtitle">Start scanning your backend and testing routes in minutes.</p>
-            </div>
-            <div class="cta-actions">
-              <a class="btn btn-primary" href="https://github.com/nkrider7/fishman/releases" target="_blank" rel="noopener noreferrer">
-                Get Releases
-              </a>
-              <a class="btn btn-ghost" href="https://nkrider7.github.io/fishman-docs" target="_blank" rel="noopener noreferrer">
-                Run locally
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section section-understand" id="understand" aria-labelledby="understand-title">
         <div class="container">
           <div class="understand-top">
@@ -834,7 +878,7 @@
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Windows, macOS, Linux",
             "url": "https://nkrider7.github.io/fishman/",
-            "downloadUrl": "https://github.com/nkrider7/fishman/releases",
+            "downloadUrl": "https://nkrider7.github.io/fishman/linux/Fishman_0.1.0_amd64.AppImage",
             "image": "https://nkrider7.github.io/fishman/assets/mainmock.png",
             "description": "Fishman is a local-first, open-source API IDE built with Tauri and React. Test REST APIs, scan backend routes into collections, and stay private — a native alternative to Postman, Insomnia, and Bruno.",
             "offers": {

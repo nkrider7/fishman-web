@@ -10,4 +10,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://nkrider7.github.io/fishman/linux/Fishman_0.1.0_amd64.AppImage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nkrider7.github.io/fishman/linux/Fishman_0.1.0_amd64.deb</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nkrider7.github.io/fishman/linux/Fishman-0.1.0-1.x86_64.rpm</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
