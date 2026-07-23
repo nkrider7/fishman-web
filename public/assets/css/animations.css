@@ -10,6 +10,17 @@
   }
 }
 
+@keyframes heroPreviewIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0) rotateX(5deg) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotateX(1.5deg) scale(1);
+  }
+}
+
 /* Scroll reveal */
 .reveal.is-visible {
   opacity: 1;
@@ -98,4 +109,3 @@
     translate: 0 -6px;
   }
 }
-
