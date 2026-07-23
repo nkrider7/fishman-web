@@ -140,7 +140,7 @@
 
             <div class="hero-cta reveal" data-reveal>
               <a class="btn btn-primary" href="#download">
-                Download Linux Beta
+                Download Beta
               </a>
               <a class="btn btn-ghost" href="https://github.com/nkrider7/fishman" target="_blank" rel="noopener noreferrer">
                 View on GitHub
@@ -183,49 +183,78 @@
         <div class="container">
           <div class="download-card reveal" data-reveal>
             <div class="download-card-copy">
-              <p class="eyebrow">Linux beta · v0.1.0</p>
+              <p class="eyebrow">Beta · v0.1.0</p>
               <h2 class="section-title" id="download-title">Download Fishman</h2>
               <p class="section-subtitle">
-                Linux builds are ready now (amd64). Pick AppImage for a one-file run, or install with
-                <code class="inline-code">.deb</code>
-                /
-                <code class="inline-code">.rpm</code>.
-                macOS and Windows are coming soon.
+                Linux and Windows 64-bit builds are ready. Pick your platform below — macOS is coming soon.
               </p>
             </div>
 
-            <div class="download-packages" role="group" aria-label="Linux download packages">
-              <a
-                class="download-package download-package--primary"
-                href="linux/Fishman_0.1.0_amd64.AppImage"
-                download
-              >
-                <span class="download-package-label">AppImage</span>
-                <span class="download-package-meta">Universal · run anywhere</span>
-              </a>
-              <a
-                class="download-package"
-                href="linux/Fishman_0.1.0_amd64.deb"
-                download
-              >
-                <span class="download-package-label">.deb</span>
-                <span class="download-package-meta">Debian / Ubuntu</span>
-              </a>
-              <a
-                class="download-package"
-                href="linux/Fishman-0.1.0-1.x86_64.rpm"
-                download
-              >
-                <span class="download-package-label">.rpm</span>
-                <span class="download-package-meta">Fedora / RHEL</span>
-              </a>
+            <div class="download-platforms">
+              <div class="download-platform">
+                <h3 class="download-platform-title">Linux <span>amd64</span></h3>
+                <div class="download-packages download-packages--linux" role="group" aria-label="Linux download packages">
+                  <a
+                    class="download-package download-package--primary"
+                    href="linux/Fishman_0.1.0_amd64.AppImage"
+                    download
+                  >
+                    <span class="download-package-label">AppImage</span>
+                    <span class="download-package-meta">Universal · run anywhere</span>
+                  </a>
+                  <a
+                    class="download-package"
+                    href="linux/Fishman_0.1.0_amd64.deb"
+                    download
+                  >
+                    <span class="download-package-label">.deb</span>
+                    <span class="download-package-meta">Debian / Ubuntu</span>
+                  </a>
+                  <a
+                    class="download-package"
+                    href="linux/Fishman-0.1.0-1.x86_64.rpm"
+                    download
+                  >
+                    <span class="download-package-label">.rpm</span>
+                    <span class="download-package-meta">Fedora / RHEL</span>
+                  </a>
+                </div>
+                <p class="download-hint muted">
+                  AppImage tip:
+                  <code class="inline-code">chmod +x Fishman_0.1.0_amd64.AppImage</code>
+                  then run it.
+                </p>
+              </div>
+
+              <div class="download-platform">
+                <h3 class="download-platform-title">Windows <span>64-bit only</span></h3>
+                <div class="download-packages download-packages--windows" role="group" aria-label="Windows 64-bit download packages">
+                  <a
+                    class="download-package download-package--primary"
+                    href="window/Fishman_0.1.0_x64-setup.exe"
+                    download
+                  >
+                    <span class="download-package-label">Setup (.exe)</span>
+                    <span class="download-package-meta">Installer · recommended</span>
+                  </a>
+                  <a
+                    class="download-package"
+                    href="window/Fishman_0.1.0_x64_en-US.msi"
+                    download
+                  >
+                    <span class="download-package-label">.msi</span>
+                    <span class="download-package-meta">Enterprise / silent install</span>
+                  </a>
+                </div>
+                <p class="download-hint muted">
+                  Windows builds are <strong>64-bit (x64) only</strong>. 32-bit is not supported.
+                </p>
+              </div>
             </div>
 
             <div class="download-card-foot">
               <p class="download-hint muted">
-                AppImage tip:
-                <code class="inline-code">chmod +x Fishman_0.1.0_amd64.AppImage</code>
-                then run it.
+                macOS builds are not available yet — follow the repo for updates.
               </p>
               <a
                 class="download-docs-link"
@@ -876,9 +905,9 @@
             "@id": "https://nkrider7.github.io/fishman/#app",
             "name": "Fishman",
             "applicationCategory": "DeveloperApplication",
-            "operatingSystem": "Windows, macOS, Linux",
+            "operatingSystem": "Windows 64-bit, Linux",
             "url": "https://nkrider7.github.io/fishman/",
-            "downloadUrl": "https://nkrider7.github.io/fishman/linux/Fishman_0.1.0_amd64.AppImage",
+            "downloadUrl": "https://nkrider7.github.io/fishman/window/Fishman_0.1.0_x64-setup.exe",
             "image": "https://nkrider7.github.io/fishman/assets/mainmock.png",
             "description": "Fishman is a local-first, open-source API IDE built with Tauri and React. Test REST APIs, scan backend routes into collections, and stay private — a native alternative to Postman, Insomnia, and Bruno.",
             "offers": {
